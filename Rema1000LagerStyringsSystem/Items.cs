@@ -10,4 +10,6 @@ namespace Rema1000LagerStyringsSystem
     {
 
     }
+    //Yo Miki
+    //Har du det godt?
 }
