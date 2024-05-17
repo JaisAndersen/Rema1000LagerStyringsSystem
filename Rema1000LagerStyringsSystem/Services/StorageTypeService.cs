@@ -22,7 +22,7 @@ namespace Rema1000LagerStyringsSystem.Services
         }
         public void RemoveStorageType(string name) 
         {
-            storageTypes.Remove();
+
         }
         public void StorageTypeSearch() 
         {
