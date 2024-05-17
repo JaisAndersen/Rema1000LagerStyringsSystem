@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Rema1000LagerStyringsSystem
 {
-    public class ButiksHylde
+    public class StorageType
     {
-        //sadsadsad
 
     }
 }

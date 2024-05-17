@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rema1000LagerStyringsSystem
 {
-    public class WholeSale
+    public class WholeSaler
     {
 
     }
