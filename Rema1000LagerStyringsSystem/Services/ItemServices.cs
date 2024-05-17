@@ -6,63 +6,62 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    using Rema100LagerStyringsSystem.Models
+    using Rema1000LagerStyringsSystem.Models;
 
     public class ItemService
     {
         private string fileName;
-        private Items Item;
+        private Item Item;
 
         public ItemService()
         {
 
         }
-      
+
         public ItemService(string fileName)
-          
+
         {
             this.fileName = fileName;
         }
 
-        
-        public void CreateItem(Items item)
+
+        public void CreateItem(Item item)
         {
-            
+
         }
 
-        
+
         public void PrintItem(int id)
         {
-            
-            
+
+
         }
 
-        
-        public void UpdateItem(Items item)
+
+        public void UpdateItem(Item item)
         {
-            
+
         }
 
-        
+
         public void RemoveItem(string name)
         {
-            
+
         }
 
-        
-        public Items GetItem(string name)
+
+        public Item GetItem(string name)
         {
 
             return null;
         }
 
-        
-        public List<Items> GetItems()
+
+        public List<Item> GetItems()
         {
 
             return null;
-        } 
-=======
-    
+        }
+    }
 }
  
