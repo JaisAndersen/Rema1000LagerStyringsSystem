@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rema1000LagerStyringsSystem
+namespace Rema1000LagerStyringsSystem.Model
 {
-    public class ItemCategory
+    public class Statistic
     {
 
     }
