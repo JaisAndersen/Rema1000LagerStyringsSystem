@@ -1,18 +1,25 @@
 ﻿namespace Rema1000LagerStyringsSystem.Services
 {
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using Rema100LagerStyringsSystem.Models
 
-    internal class ItemService
+    public class ItemService
     {
         private string fileName;
         private Items Item;
 
-        
+        public ItemService()
+        {
+
+        }
+      
         public ItemService(string fileName)
+          
         {
             this.fileName = fileName;
         }
@@ -55,6 +62,7 @@
 
             return null;
         } 
-    }
+=======
+    
 }
  
