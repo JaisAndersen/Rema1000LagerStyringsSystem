@@ -9,6 +9,7 @@ namespace Rema1000LagerStyringsSystem
     public class Customer
     {
         ///hej miki
+        ///goddag
 
     }
 }
