@@ -20,9 +20,9 @@ namespace Rema1000LagerStyringsSystem.Services
                 Console.WriteLine(storageType);
             }
         }
-        public void RemoveStorageType(string name) 
+        public void RemoveStorageType(int id) 
         {
-
+            storageTypes.Remove();
         }
         public void StorageTypeSearch() 
         {
