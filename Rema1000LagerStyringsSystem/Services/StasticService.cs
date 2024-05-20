@@ -9,12 +9,13 @@ namespace Rema1000LagerStyringsSystem.Services
     public class StatisticService
     {
 
-        private List<Customer> list;
-        
-
+        private List<Customer> customer;
+        private List<Items> items;
+        private List<StorageType> storageTypes;
 
         public void PrintItems()
         {
+
 
         }
 
@@ -27,15 +28,25 @@ namespace Rema1000LagerStyringsSystem.Services
         {
 
         }
-        public CustomerSearch(string name) Customer
+        public Customer CustomerSearch(string name)
+        {
 
+        }
 
 
         public void GetItem(string name)
         {
 
         }
-            
+
+    }
+
+
+}      
+
+
+   
+    
 
 
 
@@ -45,7 +56,6 @@ namespace Rema1000LagerStyringsSystem.Services
        
 
 
-}
 
 
 
@@ -72,18 +82,6 @@ namespace Rema1000LagerStyringsSystem.Services
 
 
 
-        < Customer > list
-            <Colditem> list;
-            <Dryitem>list;
-        <ItemCategory> list;
 
-            +Printitem(int id):int 
-            +PrintCustomers():string;
-            +PrintItemCategory()void;
-            +CustomerSearch(string Name): Customer;
-            +GetItems()list <Items>;
-            +GetItem(string name);Item;
+    
 
-
-    }
-}
