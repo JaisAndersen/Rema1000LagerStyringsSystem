@@ -11,7 +11,7 @@ namespace Rema1000LagerStyringsSystem.Services
     public class StatisticService
     {
         ItemService ItemService = new ItemService("List");
-        StorageType StorageType = new StorageType("List");
+        StorageTypeService StorageType = new StorageTypeService();
 
         
 
