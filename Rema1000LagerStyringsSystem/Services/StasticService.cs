@@ -25,9 +25,9 @@ namespace Rema1000LagerStyringsSystem.Services
         private List<Customer> customers;
 
 
-        private List<Customer> customer;
-        {
-
+        //private List<Customer> customer;
+        //{
+        //}
         
 
 

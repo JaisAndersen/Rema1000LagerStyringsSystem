@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Rema1000LagerStyringsSystem 
 {
-    public class Program() 
+    public class Program
     {
         static void Main(string[] args) 
         {

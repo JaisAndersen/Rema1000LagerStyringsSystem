@@ -16,7 +16,7 @@ namespace Rema1000LagerStyringsSystem.Services
 
         public StorageTypeService() 
         { 
-        
+            
         }
 
 
