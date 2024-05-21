@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Rema1000LagerStyringsSystem
 {
-    internal class StartUp
+    public class StartUp
     {
+
     }
 }
