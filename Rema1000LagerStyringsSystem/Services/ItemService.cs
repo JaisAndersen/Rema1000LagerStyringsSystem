@@ -9,12 +9,20 @@ using Rema1000LagerStyringsSystem.Models;
 
     public class ItemService
     {
+
         private string fileName;
         private Item Item;
+        List<Item> itemList;
+
 
         public ItemService(string fileName)
         {
             this.fileName = fileName;
+        }
+
+        public List<Item> ItemList
+        {
+            get { return itemList; }
         }
 
         public void CreateItem(Item item)

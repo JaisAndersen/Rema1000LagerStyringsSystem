@@ -12,6 +12,19 @@ namespace Rema1000LagerStyringsSystem.Services
         private List<StorageType> storageTypes;
         private List<Item> items;
         private string fileName = "";
+        List<StorageType> storageTypeList;
+
+        public StorageTypeService() 
+        { 
+        
+        }
+
+
+
+        public List<StorageType> StorageTypeList
+        {
+            get { return storageTypeList; }
+        }
 
         public void CreateStorageType() 
         {

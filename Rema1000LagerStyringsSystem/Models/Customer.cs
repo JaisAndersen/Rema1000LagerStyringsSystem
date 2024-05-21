@@ -8,8 +8,16 @@ namespace Rema1000LagerStyringsSystem.Models
 {
     public class Customer
     {
-        ///hej miki
-        ///goddag
+     /*  
+        List<int> intList;
+
+        public List<int> IntList 
+            {
+            get { return intList; }
+            }
+        Hvordan man kan få andre klasser til at tilgå en liste - Lucas
+       */ 
+        
 
     }
 }
