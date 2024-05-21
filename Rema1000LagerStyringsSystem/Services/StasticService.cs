@@ -22,7 +22,7 @@ namespace Rema1000LagerStyringsSystem.Services
 
         public void PrintCustomers()
         {
-
+            ///hej
         }
         public void PrintStorageType()
         {
