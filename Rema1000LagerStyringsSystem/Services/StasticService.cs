@@ -28,7 +28,14 @@ namespace Rema1000LagerStyringsSystem.Services
         private List<Customer> customer;
         {
 
-        }
+        
+
+
+        private List<Item> items;
+        private List<StorageType> storageTypes;
+
+       
+        
         public Customer CustomerSearch(string name)
         {
             return null;
