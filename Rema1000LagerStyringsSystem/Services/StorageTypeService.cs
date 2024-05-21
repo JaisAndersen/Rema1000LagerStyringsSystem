@@ -39,12 +39,6 @@ namespace Rema1000LagerStyringsSystem.Services
 
         }
 
-        public void GetStorageType(StorageType storageType)
-        {
-
-
-        }
-
          public void UpdateStorageType(StorageType storageType)
         {
             if (storageType != null) 
@@ -62,10 +56,6 @@ namespace Rema1000LagerStyringsSystem.Services
             }
         }
 
-        public void RemoveStorageType(int id) 
-        {
-            StorageTypeList.Remove(StorageTypeList[id]);
-        }
         public StorageType StorageTypeSearch(string storageTypeName) 
         {
             foreach (StorageType storageType in StorageTypeList)
