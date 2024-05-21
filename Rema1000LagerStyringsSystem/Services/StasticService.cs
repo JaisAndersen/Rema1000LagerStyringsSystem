@@ -1,17 +1,19 @@
-﻿using System;
+﻿using Rema1000LagerStyringsSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rema1000LagerStyringsSystem.Services;
 
 namespace Rema1000LagerStyringsSystem.Services
 {
     public class StatisticService
     {
+        ItemService ItemService = new ItemService("List");
+        StorageType StorageType = new StorageType("List");
 
-        private List<Customer> customer;
-        private List<Items> items;
-        private List<StorageType> storageTypes;
+        
 
         public void PrintItems()
         {
@@ -19,6 +21,7 @@ namespace Rema1000LagerStyringsSystem.Services
 
         }
 
+        
 
         public void PrintCustomers()
         {
