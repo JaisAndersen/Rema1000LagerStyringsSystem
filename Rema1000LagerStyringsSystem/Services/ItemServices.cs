@@ -1,60 +1,48 @@
 ﻿namespace Rema1000LagerStyringsSystem.Services
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Rema1000LagerStyringsSystem.Models;
 
-    internal class ItemService
+    public class ItemService
     {
         private string fileName;
-        private Items Item;
+        private Item Item;
 
-        
         public ItemService(string fileName)
         {
             this.fileName = fileName;
         }
 
-        
-        public void CreateItem(Items item)
+        public void CreateItem(Item item)
         {
-            
-        }
 
-        
+        }
         public void PrintItem(int id)
         {
-            
-            
-        }
 
-        
-        public void UpdateItem(Items item)
+        }
+        public void UpdateItem(Item item)
         {
-            
-        }
 
-        
+        }
         public void RemoveItem(string name)
         {
-            
-        }
 
-        
-        public Items GetItem(string name)
+        }
+        public Item GetItem(string name)
         {
 
             return null;
         }
-
-        
-        public List<Items> GetItems()
+        public List<Item> GetItems()
         {
 
             return null;
-        } 
+        }
     }
 }
  
