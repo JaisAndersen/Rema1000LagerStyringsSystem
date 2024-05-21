@@ -23,7 +23,7 @@ using Rema1000LagerStyringsSystem.Models;
         }
         public void PrintItem(int id)
         {
-
+            //GetItem();
         }
         public void UpdateItem(Item item)
         {

@@ -22,7 +22,7 @@ namespace Rema1000LagerStyringsSystem.Services
         
         public Customer CustomerSearch(string name)
         {
-
+            return null;
         }
 
 

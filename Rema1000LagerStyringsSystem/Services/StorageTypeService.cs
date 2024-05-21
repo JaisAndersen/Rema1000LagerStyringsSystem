@@ -13,12 +13,9 @@ namespace Rema1000LagerStyringsSystem.Services
         private List<Item> items;
         private string fileName = "";
 
-        public void PrintStorageType() 
+        public void CreateStorageType() 
         {
-            foreach (StorageType storageType in storageTypes) 
-            {
-                Console.WriteLine(storageType);
-            }
+            
         }
         public void RemoveStorageType(int id) 
         {
