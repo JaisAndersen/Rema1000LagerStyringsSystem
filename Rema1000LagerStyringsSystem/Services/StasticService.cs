@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rema1000LagerStyringsSystem.Models;
 
 namespace Rema1000LagerStyringsSystem.Services
 {
@@ -10,7 +11,7 @@ namespace Rema1000LagerStyringsSystem.Services
     {
 
         private List<Customer> customer;
-        private List<Items> items;
+        private List<Item> items;
         private List<StorageType> storageTypes;
 
         public void PrintItems()
