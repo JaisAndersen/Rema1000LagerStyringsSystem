@@ -16,6 +16,7 @@ namespace Rema1000LagerStyringsSystem.Services
     {
         ItemService ItemService = new ItemService("List");
         StorageTypeService StorageType = new StorageTypeService();
+
         
 
         public void PrintItems()
@@ -29,11 +30,6 @@ namespace Rema1000LagerStyringsSystem.Services
 {
         }
 
-        
-
-
-        private List<Item> items;
-        private List<StorageType> storageTypes;
 
        
         

@@ -9,10 +9,9 @@ namespace Rema1000LagerStyringsSystem.Services
 {
     public class StorageTypeService
     {
-        private List<StorageType> storageTypes;
         private List<Item> items;
         private string fileName = "";
-        List<StorageType> storageTypeList;
+        private List<StorageType> storageTypeList;
 
         public StorageTypeService() 
         { 
@@ -32,11 +31,11 @@ namespace Rema1000LagerStyringsSystem.Services
         }
         public void RemoveStorageType(int id) 
         {
-            storageTypes.Remove(storageTypes[id]);
+            StorageTypeList.Remove(StorageTypeList[id]);
         }
         public StorageType StorageTypeSearch(string storageTypeName) 
         {
-            foreach (StorageType storageType in storageTypes)
+            foreach (StorageType storageType in StorageTypeList)
             {
                 if (storageType != null)
                 {
