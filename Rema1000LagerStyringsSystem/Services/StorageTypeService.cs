@@ -35,10 +35,5 @@ namespace Rema1000LagerStyringsSystem.Services
             }
             return null;
         }
-        public void CreateStorageType() 
-        {
-            
-        }
-
     }
 }
