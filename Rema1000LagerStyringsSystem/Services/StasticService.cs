@@ -11,7 +11,7 @@ namespace Rema1000LagerStyringsSystem.Services
     {
 
         private List<Customer> customer;
-        private List<Items> items;
+        private List<Item> items;
         private List<StorageType> storageTypes;
 
         public void PrintItems()
