@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rema1000LagerStyringsSystem
+namespace Rema1000LagerStyringsSystem.Models
 {
-    public class StorageType
+    public class Customer
     {
+        ///hej miki
+        ///goddag
 
     }
 }
