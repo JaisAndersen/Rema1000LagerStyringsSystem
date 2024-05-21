@@ -19,8 +19,8 @@ namespace Rema1000LagerStyringsSystem.Models
 
         public StorageType(string name)
         {
-            _id = _storageTypeCounter;
-            _storageTypeCounter++;
+            _id = Id;
+            _name = Name;
 
         }
 

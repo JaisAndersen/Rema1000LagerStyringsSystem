@@ -50,7 +50,6 @@ namespace Rema1000LagerStyringsSystem.Services
                         e.Name = storageType.Name;
                         e.Id = storageType.Id;
                     }
-                    
               }
 
             }
