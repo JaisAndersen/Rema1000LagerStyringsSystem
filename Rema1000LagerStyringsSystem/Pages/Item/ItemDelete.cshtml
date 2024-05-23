@@ -1,4 +1,30 @@
-﻿@page
+﻿@page "{Id}"
 @model Rema1000LagerStyringsSystem.Pages.Itemcrud.ItemDeleteModel
 @{
+    ViewData["Title"] = "ItemDelete";
 }
+
+<h1>DeleteEvent</h1>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <form method="post">
+        <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(Models => Models.Item.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(Models => Models.Item.Id)
+        </dd>
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(Models => Models.Item.Name)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(Models => Models.Item.Name)
+    </dd>
+        </dl>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+    <div>
+        <a asp-page="Index">Back to List</a>
+    </div>
+</div>

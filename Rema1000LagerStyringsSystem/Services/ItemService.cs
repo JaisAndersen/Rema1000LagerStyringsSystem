@@ -39,25 +39,41 @@ using Rema1000LagerStyringsSystem.Models;
                         e.Name = item.Name;
                         e.Id = item.Id;
                     }
+
                 }
+
             }
         }
         public void RemoveItem(string name)
         {
             itemList.RemoveAll(item => item.Name == name);
+
         }
 
-        public Item itemSearch(Item itemName)
+
+        public Item itemSearch(int Id)
         {
             foreach (Item item in itemList)
             {
                 if (item != null)
                 {
-                    if (string.Equals(item.Name, itemName)) return item;
+                    if (string.Equals(item.Name, Id)) return item;
                 }
             }
             return null;
         }
+
+        public Item GetItem(string name)
+        {
+            return null;
+        }
+        public List<Item> GetItems()
+        {
+
+            return null;
+        }
+
+        
     }
 }
  
