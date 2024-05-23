@@ -17,6 +17,7 @@ namespace Rema1000LagerStyringsSystem.Services
         StorageTypeService StorageType = new StorageTypeService();
 
         private List<Customer> customers;
+
         private List<Item> items;
         private List<StorageType> storageTypes;
         
