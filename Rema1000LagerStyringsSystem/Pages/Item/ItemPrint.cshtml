@@ -1,4 +1,57 @@
 ﻿@page
 @model Rema1000LagerStyringsSystem.Pages.Itemcrud.ItemPrintModel
 @{
+    ViewData["Title"] = "ItemPrintModel";
 }
+<h1>Print all items</h1>
+
+<p>
+    <a asp-page="CreateItem">Create New Item</a>
+</p>
+
+<form>
+    <p>
+    Search: <input type="text" asp-for="FilterCriteria" />
+    <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ItemList)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Price
+                </td>
+                <td>
+                    <p>
+                        <a asp-page="UpdateItem" asp-route-id="@item.Id">Edit</a>
+                        <a asp-page="RemoveItem" asp-route-id="@item.Id">Delete</a>
+                    </p>
+                </td>
+            </tr>
+        }
+
+        </tbody>
+
+        </table>
