@@ -17,16 +17,35 @@ namespace Rema1000LagerStyringsSystem.Services
         StorageTypeService StorageType = new StorageTypeService();
 
         private List<Customer> customers;
-         
+
+        private List<Item> items;
+        private List<StorageType> storageTypes;
         
-        public Customer CustomerSearch(string name)
+        
+        public Item itemSearch(Item itemName)
         {
+            foreach (Item item in itemList)
+            {
+                if (item != null)
+                {
+                    if (string.Equals(item.Name, itemName)) return item;
+                }
+            }
             return null;
         }
-        public void GetItem(string name)
+        public StorageType StorageTypeSearch(string storageTypeName)
         {
-
+            foreach (StorageType storageType in StorageTypeList)
+            {
+                if (storageType != null)
+                {
+                    if (string.Equals(storageType.Name, storageTypeName)) return storageType;
+                }
+            }
+            return null;
         }
+
+
     }
 }      
 
