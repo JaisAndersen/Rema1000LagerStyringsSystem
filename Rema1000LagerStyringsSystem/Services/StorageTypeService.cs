@@ -20,7 +20,6 @@ namespace Rema1000LagerStyringsSystem.Services
         }
 
 
-
         public List<StorageType> StorageTypeList
         {
             get { return storageTypeList; }
