@@ -34,11 +34,6 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
         {
             return Page();
         }
-
-
-        }
-
     }
-
-
 }
+
