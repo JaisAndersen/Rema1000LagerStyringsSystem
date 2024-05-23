@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Rema1000LagerStyringsSystem.Interface;
+using Rema1000LagerStyringsSystem.Services;
+using Rema1000LagerStyringsSystem.Models;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Rema1000LagerStyringsSystem
 {
@@ -25,6 +29,7 @@ namespace Rema1000LagerStyringsSystem
         {
             services.AddRazorPages();
 
+            services.AddTransient<IItem,ItemJson>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

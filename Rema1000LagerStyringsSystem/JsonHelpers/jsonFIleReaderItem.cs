@@ -12,10 +12,9 @@ using System.Runtime.Serialization.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-
 namespace Rema1000LagerStyringsSystem.JsonHelpers
 {
-    public class jsonFIleReaderItem
+    public class jsonFileReaderItem
     {
         public static List<Item> ReadJson(string JsonFileName)
         {

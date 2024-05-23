@@ -9,25 +9,23 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
     public class ItemDeleteModel : PageModel
     {
+        private IItem repo;
         [BindProperty]
         public Item Item { get; set; }
-        ItemService ItemService;
-        private IItem repo;
-
-        public ItemDeleteModel(ItemService item)
+        public ItemDeleteModel(IItem repository)
         {
-            ItemService = item;
+            repo = repository;
         }
         public IActionResult OnGet(int Id)
         {
-            Item = ItemService.itemSearch(Id);
+            Item = repo.GetItem(Id);
             return Page();
         }
 
-        public IActionResult OnPost(string name)
+        public IActionResult OnPost(int id)
         {
-            ItemService.RemoveItem(name);
-            return RedirectToPage("Index");
+            repo.RemoveItem(id);
+            return RedirectToPage("ItemPrint");
         }
     }
 }

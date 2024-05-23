@@ -14,7 +14,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 namespace Rema1000LagerStyringsSystem.JsonHelpers
 {
-    public class jsonfileWriterItem
+    public class jsonFileWriterItem
     {
         public static void WriteToJson(List<Item> Items, string JsonFileName)
         {

@@ -1,12 +1,14 @@
 ﻿@page
 @model Rema1000LagerStyringsSystem.Pages.Itemcrud.ItemPrintModel
+@using Rema1000LagerStyringsSystem.Interface
+@inject IItem repository
 @{
     ViewData["Title"] = "ItemPrintModel";
 }
 <h1>Print all items</h1>
 
 <p>
-    <a asp-page="CreateItem">Create New Item</a>
+    <a asp-page="ItemCreate">Create New Item</a>
 </p>
 
 <form>
@@ -45,8 +47,8 @@
                 </td>
                 <td>
                     <p>
-                        <a asp-page="UpdateItem" asp-route-id="@item.Id">Edit</a>
-                        <a asp-page="RemoveItem" asp-route-id="@item.Id">Delete</a>
+                        <a asp-page="ItemUpdate" asp-route-id="@item.Id">Edit</a>
+                        <a asp-page="ItemDelete" asp-route-id="@item.Id">Delete</a>
                     </p>
                 </td>
             </tr>
