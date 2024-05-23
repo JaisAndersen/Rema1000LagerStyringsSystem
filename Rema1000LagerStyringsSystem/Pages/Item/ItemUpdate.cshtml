@@ -1,4 +1,28 @@
-﻿@page
+﻿@page "{Id}"
 @model Rema1000LagerStyringsSystem.Pages.Itemcrud.ItemUpdateModel
 @{
+    ViewData["Title"] = "Update Item";
 }
+
+<h1>Update Item</h1>
+
+<form method="post">
+    <div class="form-group">
+    <label asp-for="@Model.Item.Id" class="control-label"><</label>
+    <input hidden="hidden" asp-for="@Model.Item.Id" class="form-control" />
+    <span asp-validation-for="@Model.Item.Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Item.Name" class="control-label"><</label>
+        <input hidden="hidden" asp-for="@Model.Item.Name" class="form-control" />
+        <span asp-validation-for="@Model.Item.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Item.Price" class="control-label"><</label>
+        <input hidden="hidden" asp-for="@Model.Item.Price" class="form-control" />
+        <span asp-validation-for="@Model.Item.Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>

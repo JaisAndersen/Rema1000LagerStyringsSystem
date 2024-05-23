@@ -2,19 +2,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Rema1000LagerStyringsSystem.Services;
 using Rema1000LagerStyringsSystem.Models;
+using Rema1000LagerStyringsSystem.Interface;
+using System.Collections.Generic;
 
 namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
     public class ItemUpdateModel : PageModel
     {
 
-        private ItemService ItemService;
+        
+        
         [BindProperty]
         public Item Item { get; set; }
         private ItemService itemService;
+        private IItem repo;
+        public List<Item> itemList { get; set; }
+
         public ItemUpdateModel(ItemService item)
         {
-            ItemService = item;
+            itemService = item;
         }
         public IActionResult OnGet(int Id)
         {
@@ -28,7 +34,7 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
             {
                 return Page();
             }
-            ItemService.UpdateItem(Item);
+            itemService.UpdateItem(Item);
             return RedirectToPage("Index");
         }
     }
