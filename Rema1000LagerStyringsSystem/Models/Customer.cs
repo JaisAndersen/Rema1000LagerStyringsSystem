@@ -15,9 +15,6 @@ namespace Rema1000LagerStyringsSystem.Models
             {
             get { return intList; }
             }
-        Hvordan man kan få andre klasser til at tilgå en liste - Lucas
-       */ 
-        
-
+        Hvordan man kan få andre klasser til at tilgå en liste - Lucas */     
     }
 }
