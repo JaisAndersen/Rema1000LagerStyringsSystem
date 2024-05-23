@@ -24,7 +24,7 @@ namespace Rema1000LagerStyringsSystem.Services
         
         public Item itemSearch(Item itemName)
         {
-            foreach (Item item in itemList)
+            foreach (Item item in items)
             {
                 if (item != null)
                 {
@@ -35,7 +35,7 @@ namespace Rema1000LagerStyringsSystem.Services
         }
         public StorageType StorageTypeSearch(string storageTypeName)
         {
-            foreach (StorageType storageType in StorageTypeList)
+            foreach (StorageType storageType in storageTypes)
             {
                 if (storageType != null)
                 {
