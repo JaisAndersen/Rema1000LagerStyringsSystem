@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rema1000LagerStyringsSystem.Interface;
 using Rema1000LagerStyringsSystem.Models;
 
 namespace Rema1000LagerStyringsSystem.Services
 {
-    public class StorageTypeService
+    public class StorageTypeService : IStorageType
     {
         private StorageType StorageType = new StorageType("name");
         private List<Item> items;
@@ -60,6 +61,21 @@ namespace Rema1000LagerStyringsSystem.Services
                 }
             }
             return null;
+        }
+
+        public List<StorageType> GetAllStorageTypes()
+        {
+            return storageTypeList;
+        }
+
+        public void AddStorageType(StorageType storageType)
+        {
+            storageTypeList.Add(storageType);
+        }
+
+        public StorageType GetStorageType(int id)
+        {
+            return StorageTypeList[id];
         }
     }
 }
