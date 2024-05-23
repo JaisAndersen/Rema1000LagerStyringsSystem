@@ -3,14 +3,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
-    public class ItemcreateModel : PageModel
+    public class ItemDeleteModel : PageModel
     {
         public void OnGet()
         {
-
         }
-
-
-
     }
 }

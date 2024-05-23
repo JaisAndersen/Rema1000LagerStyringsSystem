@@ -26,16 +26,12 @@ namespace Rema1000LagerStyringsSystem.Models
             set { _id = value; }
         }
 
-
         public string Name
         {
             get { return _name; }
+
             set { _name = value; }
-        }
-
-
-
-       
+        }       
 
     }
 

@@ -18,9 +18,7 @@ namespace Rema1000LagerStyringsSystem.Services
         { 
             
         }
-
-
-
+      
         public List<StorageType> StorageTypeList
         {
             get { return storageTypeList; }
@@ -28,30 +26,26 @@ namespace Rema1000LagerStyringsSystem.Services
 
         public void CreateStorageType(StorageType storageType) 
         {
-
-            storageTypeList.Add(storageType);
-            
+            storageTypeList.Add(storageType);                    
         }
 
         public void RemoveStorageType(string Name)
         {
             StorageTypeList.RemoveAll(StorageType => StorageType.Name == Name);
-
         }
 
          public void UpdateStorageType(StorageType storageType)
         {
             if (storageType != null) 
             { 
-              foreach (var e in StorageTypeList) 
-              {
+                foreach (var e in StorageTypeList) 
+                {
                     if (e.Name == storageType.Name)
                     {
                         e.Name = storageType.Name;
                         e.Id = storageType.Id;
                     }
-                    
-              }
+                }
 
             }
         }
