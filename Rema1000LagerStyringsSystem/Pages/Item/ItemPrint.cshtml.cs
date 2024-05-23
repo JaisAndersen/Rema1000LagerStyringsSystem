@@ -3,31 +3,33 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Rema1000LagerStyringsSystem.Models;
 using Rema1000LagerStyringsSystem.Services;
 using System.Collections.Generic;
+using Rema1000LagerStyringsSystem.Interface;
 
 
 namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
     public class ItemPrintModel : PageModel
     {
-        private ItemService ItemService;
+        private ItemService itemService;
+        private IItem repo;
         public ItemPrintModel(ItemService item)
         {
-            ItemService = item;
+            itemService = item;
         }
-        public List<Item> ItemList { get; set; }
+        public List<Item> itemList { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
-        /*
+        
         public IActionResult OnGet()
         {
-            ItemList = ItemService.Allitems();
+            itemList = itemService.GetAllItems();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
-                ItemList = itemService.FilterPizza(FilterCriteria);
+                itemList = itemService.FilterItems(FilterCriteria);
             }
 
             return Page();
-        }*/
+        }
     }
 }

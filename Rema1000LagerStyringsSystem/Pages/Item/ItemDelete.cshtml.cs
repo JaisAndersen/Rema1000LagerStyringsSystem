@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Rema1000LagerStyringsSystem.Services;
 using Rema1000LagerStyringsSystem.Models;
 using Microsoft.VisualBasic;
+using Rema1000LagerStyringsSystem.Interface;
 
 namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
@@ -11,6 +12,7 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
         [BindProperty]
         public Item Item { get; set; }
         ItemService ItemService;
+        private IItem repo;
 
         public ItemDeleteModel(ItemService item)
         {
