@@ -8,16 +8,15 @@ namespace Rema1000LagerStyringsSystem.Models
 {
     public class Item
     {
-        private int _id = 1;
+        private int _id;
         private string _name;
-        private static int _itemCounter;
 
         //_itemCounter skal måske undlades.
 
         public Item(string name) 
         {
-            _id = _itemCounter;
-            _itemCounter++;
+            _name = Name;
+            _id = Id;
         }
 
         public int Id

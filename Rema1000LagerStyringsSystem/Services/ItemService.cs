@@ -50,7 +50,6 @@ using Rema1000LagerStyringsSystem.Models;
 
         }
 
-
         public Item itemSearch(Item itemName)
         {
             foreach (Item item in itemList)
@@ -60,18 +59,17 @@ using Rema1000LagerStyringsSystem.Models;
                     if (string.Equals(item.Name, itemName)) return item;
                 }
             }
-
+            return null;
+        }
         public Item GetItem(string name)
         {
             return null;
         }
         public List<Item> GetItems()
         {
-
             return null;
         }
 
-        
     }
 }
  
