@@ -23,14 +23,15 @@ namespace Rema1000LagerStyringsSystem.Models
         public int Id
         {
             get { return _id; }
-            private set { _id = value; }
+            set { _id = value; }
         }
 
         public string Name
         {
             get { return _name; }
-            private set { _name = value; }
-        }              
+
+            set { _name = value; }
+        }       
 
     }
 
