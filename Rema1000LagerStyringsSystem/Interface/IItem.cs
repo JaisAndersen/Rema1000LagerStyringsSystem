@@ -8,6 +8,17 @@ namespace Rema1000LagerStyringsSystem.Interface
         List<Item> GetAllItems();
         void AddItem(Item item);
         Item GetItem(int id);
-
+        public List<Item> FilterItems(string filter)
+        {
+            List<Item> filteredList = new List<Item>();
+            foreach (Item item in GetAllItems())
+            {
+                if (item.Name.Contains(filter, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    filteredList.Add(item);
+                }
+            }
+            return filteredList;
+        }
     }
 }
