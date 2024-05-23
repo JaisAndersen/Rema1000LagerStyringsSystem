@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Rema1000LagerStyringsSystem.Models;
 using Microsoft.AspNetCore.Http.Features;
+using Rema1000LagerStyringsSystem.Interface;
 
 namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
@@ -13,9 +14,9 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
         private IItem repo;
         [BindProperty]
         public Item item { get; set; }
-    public ItemCreateModel(Iitem repostitory) 
+        public ItemCreateModel(IItem repository) 
         { 
-            repo = repostitory;
+            repo = repository;
         }
         public IActionResult OnPost()
         {
@@ -23,16 +24,15 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
             {
                 return Page();
             }
-            if (repo.GetAllItems().Count < Item.ItemId)
+            if (repo.GetAllItems().Count < item.Id)
             {
-                repo.AddPizza(Item);
+                repo.AddItem(item);
             }
-            repo.UpdateItem(Item);
             return RedirectToPage("GetAllItems");
         }
         public IActionResult OnGet()
         {
-                    return Page();
+            return Page();
         }
 
 
