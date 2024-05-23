@@ -39,15 +39,12 @@ using Rema1000LagerStyringsSystem.Models;
                         e.Name = item.Name;
                         e.Id = item.Id;
                     }
-
                 }
-
             }
         }
         public void RemoveItem(string name)
         {
             itemList.RemoveAll(item => item.Name == name);
-
         }
 
         public Item itemSearch(Item itemName)
@@ -61,15 +58,6 @@ using Rema1000LagerStyringsSystem.Models;
             }
             return null;
         }
-        public Item GetItem(string name)
-        {
-            return null;
-        }
-        public List<Item> GetItems()
-        {
-            return null;
-        }
-
     }
 }
  
