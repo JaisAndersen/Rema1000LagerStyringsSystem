@@ -8,15 +8,9 @@ namespace Rema1000LagerStyringsSystem.Models
 {
     public class Statistic
     {
-
         public List<Customer> customers { get; set; }
         public List<StorageType> storagetype { get; set; }
-        public List<Item> items { get; set; }
-    
-    
-    
-    
-    
+        public List<Item> items { get; set; }          
     }
     
 }

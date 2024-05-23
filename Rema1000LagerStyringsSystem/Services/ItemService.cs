@@ -9,11 +9,9 @@ using Rema1000LagerStyringsSystem.Models;
 
     public class ItemService
     {
-
         private string fileName;
         private Item Item;
         List<Item> itemList;
-
 
         public ItemService(string fileName)
         {
@@ -43,12 +41,10 @@ using Rema1000LagerStyringsSystem.Models;
         }
         public Item GetItem(string name)
         {
-
             return null;
         }
         public List<Item> GetItems()
         {
-
             return null;
         }
     }
