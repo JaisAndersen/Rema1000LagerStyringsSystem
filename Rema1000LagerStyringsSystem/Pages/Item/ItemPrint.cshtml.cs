@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
-    public class ItemprintModel : PageModel
+    public class ItemPrintModel : PageModel
     {
         public void OnGet()
         {
