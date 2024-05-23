@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Rema1000LagerStyringsSystem.Models;
+    using Rema1000LagerStyringsSystem.Interface;
+    using Rema1000LagerStyringsSystem.Models;
 
-    public class ItemService
+    public class ItemService : IItem
     {
         private string fileName;
         private Item Item;
@@ -63,17 +64,20 @@ using Rema1000LagerStyringsSystem.Models;
             return null;
         }
 
-        public Item GetItem(string name)
+        public List<Item> GetAllItems()
         {
-            return null;
-        }
-        public List<Item> GetItems()
-        {
-
-            return null;
+            return itemList;
         }
 
-        
+        public void AddItem(Item item)
+        {
+            itemList.Add(item);
+        }
+
+        public Item GetItem(int id)
+        {
+            return itemList[id];
+        }
     }
 }
  

@@ -5,6 +5,9 @@ namespace Rema1000LagerStyringsSystem.Interface
 {
     public interface IItem
     {
-        List<Item> GetItems();
+        List<Item> GetAllItems();
+        void AddItem(Item item);
+        Item GetItem(int id);
+
     }
 }
