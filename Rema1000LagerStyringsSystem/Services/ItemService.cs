@@ -27,30 +27,44 @@ using Rema1000LagerStyringsSystem.Models;
 
         public void CreateItem(Item item)
         {
-
+            itemList.Add(item);
         }
-        public void PrintItem(int id)
-        {
-            //GetItem();
-        }
+        
         public void UpdateItem(Item item)
         {
+            if (item != null)
+            {
+                foreach (var e in itemList)
+                {
+                    if (e.Name == item.Name)
+                    {
+                        e.Name = item.Name;
+                        e.Id = item.Id;
+                    }
 
+                }
+
+            }
         }
         public void RemoveItem(string name)
         {
+            itemList.RemoveAll(item => item.Name == name);
 
         }
-        public Item GetItem(string name)
-        {
 
+        public Item itemSearch(Item itemName)
+        {
+            foreach (Item item in itemList)
+            {
+                if (item != null)
+                {
+                    if (string.Equals(item.Name, itemName)) return item;
+                }
+            }
             return null;
         }
-        public List<Item> GetItems()
-        {
 
-            return null;
-        }
+        
     }
 }
  
