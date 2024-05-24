@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
     public class ItemService : IItem
     {
-        private string fileName;
+        private string fileName = @"C:\Users\Mus\source\repos\Rema1000LagerStyringsSystem\Rema1000LagerStyringsSystem\Data\jsonItems.json";
         private Item Item;
         List<Item> itemList;
 
@@ -50,8 +50,6 @@ using System.Threading.Tasks;
             itemList.RemoveAll(item => item.Name == name);
 
         }
-
-
         public Item itemSearch(int Id)
         {
             foreach (Item item in itemList)
@@ -76,7 +74,7 @@ using System.Threading.Tasks;
 
         public Item GetItem(int id)
         {
-            return itemList[id];
+            return itemList[id-1];
         }
     }
 }

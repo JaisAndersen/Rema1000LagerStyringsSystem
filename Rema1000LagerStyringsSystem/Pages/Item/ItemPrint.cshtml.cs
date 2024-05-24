@@ -10,11 +10,10 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
     public class ItemPrintModel : PageModel
     {
-        private ItemService itemService;
         private IItem repo;
-        public ItemPrintModel(ItemService item)
+        public ItemPrintModel(IItem repository)
         {
-            itemService = item;
+            repo = repository;
         }
         public List<Item> itemList { get; set; }
 
@@ -23,10 +22,10 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
         
         public IActionResult OnGet()
         {
-            itemList = itemService.GetAllItems();
+            itemList = repo.GetAllItems();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
-              //  itemList = itemService.FilterItems(FilterCriteria);
+                itemList = repo.FilterItems(FilterCriteria);
             }
 
             return Page();

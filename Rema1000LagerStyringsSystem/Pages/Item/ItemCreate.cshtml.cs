@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Rema1000LagerStyringsSystem.Services;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 using Rema1000LagerStyringsSystem.Models;
-using Microsoft.AspNetCore.Http.Features;
+using Microsoft.VisualBasic;
 using Rema1000LagerStyringsSystem.Interface;
 
 namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
@@ -28,7 +26,7 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
             {
                 repo.AddItem(item);
             }
-            return RedirectToPage("GetAllItems");
+            return RedirectToPage("ItemPrint");
         }
         public IActionResult OnGet()
         {
