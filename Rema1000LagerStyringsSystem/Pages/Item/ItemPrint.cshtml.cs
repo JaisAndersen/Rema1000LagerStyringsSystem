@@ -26,7 +26,7 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
             itemList = itemService.GetAllItems();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
-                itemList = itemService.FilterItems(FilterCriteria);
+              //  itemList = itemService.FilterItems(FilterCriteria);
             }
 
             return Page();
