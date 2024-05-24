@@ -47,5 +47,12 @@
     "Price": 35.0,
     "Brand": "Danino",
     "StorageType": 0
+  },
+  {
+    "Id": 12,
+    "Name": "Medister",
+    "Price": 55.0,
+    "Brand": "Danbo",
+    "StorageType": 1
   }
 ]

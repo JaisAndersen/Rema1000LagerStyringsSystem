@@ -49,19 +49,6 @@ namespace Rema1000LagerStyringsSystem
         [BindProperty]
         [EnumDataType(typeof(StorageType))]
         public StorageType StorageType { get { return _storageType; } set { _storageType = value; } }
-        public enum StorageTypes
-        {
-            [Display(Name = "Majeri")]
-            Majeri = 0,
-            [Display(Name = "Kød")]
-            Kød = 1,
-            [Display(Name = "Frost")]
-            Frost = 2,
-            [Display(Name = "Frugt")]
-            Frug = 3,
-            [Display(Name = "Grønt")]
-            Grønt = 4
-        }
     }
 
 }

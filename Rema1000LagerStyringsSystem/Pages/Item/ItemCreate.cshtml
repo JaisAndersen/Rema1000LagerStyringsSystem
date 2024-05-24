@@ -21,7 +21,7 @@
     </div>
     <div>
         <label asp-for="@Model.item.StorageType" class="control-label">Varekategori</label><p></p>
-        <select asp-for="@Model.item.StorageType" asp-items="@Html.GetEnumSelectList<Item.StorageTypes>()">
+        <select asp-for="@Model.item.StorageType" asp-items="@Html.GetEnumSelectList<StorageType>()">
             <option selected="selected" value="">Vælg et kategori</option>
         </select>
     </div>
