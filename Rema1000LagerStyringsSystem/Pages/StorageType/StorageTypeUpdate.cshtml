@@ -1,0 +1,23 @@
+﻿@page "{Id}"
+@model Rema1000LagerStyringsSystem.StorageTypeUpdateModel
+@{
+    ViewData["Title"] = "StorageTypeUpdate";
+}
+
+<h1>Opdater varekategori</h1>
+
+<form method="post">
+    @* <div class="form-group">
+        <label asp-for="@Model.storageType.Id" class="control-label">ID</label>
+        <input asp-for="@Model.storageType.Id" class="form-control" />
+        <span asp-validation-for="@Model.storageType.Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.storageType.Name" class="control-label">Navn</label>
+        <input asp-for="@Model.storageType.Name" class="form-control" />
+        <span asp-validation-for="@Model.storageType.Name" class="text-danger"></span>
+    </div> *@
+    <div class="form-group">
+        <input type="submit" value="Opdater" class="btn btn-primary" />
+    </div>
+</form>

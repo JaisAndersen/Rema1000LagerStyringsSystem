@@ -1,18 +1,8 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Schema;
-using Rema1000LagerStyringsSystem.Models;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Json;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-namespace Rema1000LagerStyringsSystem.JsonHelpers
+
+namespace Rema1000LagerStyringsSystem
 {
     public class jsonFileReaderItem
     {

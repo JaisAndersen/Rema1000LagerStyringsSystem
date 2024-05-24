@@ -1,19 +1,51 @@
 [
   {
-    "Id": 1,
-    "Name": "ost",
-    "Price": 75.0,
-    "Brand": "Arla",
-    "StorageType": null
+    "Id": 2,
+    "Name": "Hakketoksekød",
+    "Price": 45.0,
+    "Brand": "Danbo",
+    "StorageType": 0
   },
   {
-    "Id": 2,
-    "Name": "Mælk",
-    "Price": 654.0,
+    "Id": 3,
+    "Name": "Kødfilet",
+    "Price": 75.0,
+    "Brand": "Danbo",
+    "StorageType": 1
+  },
+  {
+    "Id": 4,
+    "Name": "Ost",
+    "Price": 65.0,
     "Brand": "Arla",
-    "StorageType": {
-      "Id": 1,
-      "Name": "Majeri"
-    }
+    "StorageType": 0
+  },
+  {
+    "Id": 5,
+    "Name": "Rød æble",
+    "Price": 4.0,
+    "Brand": "Apple",
+    "StorageType": 3
+  },
+  {
+    "Id": 8,
+    "Name": "Skinke",
+    "Price": 56.0,
+    "Brand": "Danbo",
+    "StorageType": 1
+  },
+  {
+    "Id": 9,
+    "Name": "Frosne blåbær",
+    "Price": 19.95,
+    "Brand": "Rema1000",
+    "StorageType": 2
+  },
+  {
+    "Id": 1,
+    "Name": "Yogurt",
+    "Price": 35.0,
+    "Brand": "Danino",
+    "StorageType": 0
   }
 ]

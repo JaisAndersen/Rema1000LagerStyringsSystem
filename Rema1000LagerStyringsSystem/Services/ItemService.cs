@@ -1,82 +1,70 @@
-﻿namespace Rema1000LagerStyringsSystem.Services
-{
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-    using Rema1000LagerStyringsSystem.Interface;
-    using Rema1000LagerStyringsSystem.Models;
-
+namespace Rema1000LagerStyringsSystem
+{
     public class ItemService : IItem
     {
-        private string fileName = @"C:\Users\Mus\source\repos\Rema1000LagerStyringsSystem\Rema1000LagerStyringsSystem\Data\jsonItems.json";
-        private Item Item;
         List<Item> itemList;
-
         public ItemService()
         {
-
+            itemList = new List<Item>();
         }
-
-        public List<Item> ItemList
+        public Item GetItem(int id)
         {
-            get { return itemList; }
+            foreach (Item item in itemList) 
+            {
+                if(item.Id == id)
+                    return item;
+            }
+            return new Item();
+        }
+        public void AddItem(Item item)
+        {
+            if (!(itemList.Contains(item)))
+                itemList.Add(item);
         }
 
-        public void CreateItem(Item item)
+        public Item RemoveItem(int id)
         {
-            itemList.Add(item);
+            foreach (Item item in itemList.ToList())
+            {
+                if(item.Id == id)
+                    itemList.Remove(item);
+            }
+            return new Item();
         }
-        
+
         public void UpdateItem(Item item)
         {
-            if (item != null)
+            foreach (Item Item in itemList)
             {
-                foreach (var e in itemList)
+                if (Item.Id == item.Id)
                 {
-                    if (e.Name == item.Name)
-                    {
-                        e.Name = item.Name;
-                        e.Id = item.Id;
-                    }
-
-                }
-
-            }
-        }
-        public void RemoveItem(string name)
-        {
-            itemList.RemoveAll(item => item.Name == name);
-
-        }
-        public Item itemSearch(int Id)
-        {
-            foreach (Item item in itemList)
-            {
-                if (item != null)
-                {
-                    if (string.Equals(item.Name, Id)) return item;
+                    Item.Id = item.Id;
+                    Item.StorageType = item.StorageType;
+                    Item.Brand = item.Brand;
+                    Item.Name = item.Name;
+                    Item.Price = item.Price;
                 }
             }
-            return null;
         }
-
+        public List<Item> FilterItems(string filter)
+        {
+            List<Item> filteredList = new List<Item>();
+            foreach (Item item in GetAllItems())
+            {
+                if (item.Name.Contains(filter, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    filteredList.Add(item);
+                }
+            }
+            return filteredList;
+        }
         public List<Item> GetAllItems()
         {
             return itemList;
         }
 
-        public void AddItem(Item item)
-        {
-            itemList.Add(item);
-        }
-
-        public Item GetItem(int id)
-        {
-            return itemList[id-1];
-        }
-        public Item item { get { return item; } }
     }
 }
  

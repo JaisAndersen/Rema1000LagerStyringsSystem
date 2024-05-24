@@ -1,38 +1,51 @@
 ﻿@page
-@model Rema1000LagerStyringsSystem.Pages.Itemcrud.ItemCreateModel
+@model Rema1000LagerStyringsSystem.ItemCreateModel
+@using Rema1000LagerStyringsSystem
+@inject IItem repository
 @{
     ViewData["Title"] = "ItemCreate";
 }
-<h1>Create item</h1>
+<h1>Opret ny vare</h1>
+<div>
+    <ul>
+        <li>
+            Der er i alt @repository.GetAllItems().Count varer oprettet
+        </li>
+    </ul>
+</div>
 <form method="post">
     <div class="form-group">
-        <label asp-for="@Model.item.Id" class="control-label">ID</label>
-        <input asp-for="@Model.item.Id" class="form-control" />
+        <label asp-for="item.Id" class="control-label">ID</label>
+        <input asp-for="item.Id" class="form-control" />
         <span asp-validation-for="@Model.item.Id" class="text-danger"></span>
     </div>
     <div>
-        <label asp-for="@Model.item.StorageType.Name" class="control-label">Varekategori</label>
-        <input asp-for="@Model.item.StorageType.Name" class="form-control" />
-        <span asp-validation-for="@Model.item.StorageType.Name" class="text-danger"></span>
+        <label asp-for="@Model.item.StorageType" class="control-label">Varekategori</label><p></p>
+        <select asp-for="@Model.item.StorageType" asp-items="@Html.GetEnumSelectList<Item.StorageTypes>()">
+            <option selected="selected" value="">Vælg et kategori</option>
+        </select>
     </div>
+    <p></p>
     <div>
-        <label asp-for="@Model.item.Brand" class="control-label">Mærke</label>
-        <input asp-for="@Model.item.Brand" class="form-control" />
-        <span asp-validation-for="@Model.item.Brand" class="text-danger"></span>
+        <label asp-for="item.Brand" class="control-label">Mærke</label>
+        <input asp-for="item.Brand" class="form-control" />
+        <span asp-validation-for="item.Brand" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.item.Name" class="control-label">Navn</label>
-        <input asp-for="@Model.item.Name" class="form-control" />
-        <span asp-validation-for="@Model.item.Name" class="text-danger"></span>
+        <label asp-for="item.Name" class="control-label">Navn</label>
+        <input asp-for="item.Name" class="form-control" />
+        <span asp-validation-for="item.Name" class="text-danger"></span>
     </div>
     <div>
-        <label asp-for="@Model.item.Price" class="control-label">Pris</label>
-        <input asp-for="@Model.item.Price" class="form-control" />
-        <span asp-validation-for="@Model.item.Price" class="text-danger"></span>
+        <label asp-for="item.Price" class="control-label">Pris</label>
+        <input asp-for="item.Price" class="form-control" />
+        <span asp-validation-for="item.Price" class="text-danger"></span>
     </div>
-    
+    <p></p>
     <div class="form-group">
-        <input type="submit" value="Submit" class="btn btn-primary" />
+        <input type="submit" value="Opret" class="btn btn-primary" />
     </div>
-
+    <div>
+        <a asp-page="ItemPrint">Tilbage til alle varer</a>
+    </div>
 </form>

@@ -1,23 +1,16 @@
 ﻿@page
-@model Rema1000LagerStyringsSystem.ItemPrintModel
+@model Rema1000LagerStyringsSystem.StatisticIndexModel
 @using Rema1000LagerStyringsSystem.Interface
 @inject IItem repository
 @{
-    ViewData["Title"] = "ItemPrintModel";
+    ViewData["Title"] = "StatisticIndexModel";
 }
-<h1>Alle varer</h1>
-
-<p>
-    <a asp-page="ItemCreate">Opret ny vare</a>
-</p>
+<h1>Statistik</h1>
 
 <form>
     <p>
-    Søg efter varenavn:  <input type="text" asp-for="FilterCriteria" />
-        <input type="submit" value="Søg" /> 
-    </p>
-    <p>
-        <a asp-page="ItemPrint">Nulstil</a>
+        Search: <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Filter" />
     </p>
 </form>
 
@@ -62,13 +55,14 @@
                 </td>
                 <td>
                     <p>
-                        <a asp-page="ItemUpdate" asp-route-id="@item.Id">Redigere</a> <p></p>
-                        <a asp-page="ItemDelete" asp-route-id="@item.Id">Slet</a>
+                        <a asp-page="ItemUpdate" asp-route-id="@item.Id">Redigere</a>
+                    <p></p>
+                    <a asp-page="ItemDelete" asp-route-id="@item.Id">Slet</a>
                     </p>
                 </td>
             </tr>
         }
 
-        </tbody>
+    </tbody>
 
-        </table>
+</table>

@@ -1,19 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Rema1000LagerStyringsSystem.Services;
-using Rema1000LagerStyringsSystem.Models;
-using Microsoft.VisualBasic;
-using Rema1000LagerStyringsSystem.Interface;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System;
-using System.Collections.Generic;
+using System.Linq;
 
-namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
+
+namespace Rema1000LagerStyringsSystem
 {
     public class ItemCreateModel : PageModel
     {
         [BindProperty]
         public Item item { get; set; }
+        public SelectList selectListStorageType { get; set; }
         private IItem repo;
         public ItemCreateModel(IItem repository) 
         { 
@@ -25,10 +22,7 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
             {
                 return Page();
             }
-            if (repo.GetAllItems().Count < item.Id)
-            {
-                repo.AddItem(item);
-            }
+            repo.AddItem(item);
             return RedirectToPage("ItemPrint");
         }
         public IActionResult OnGet()

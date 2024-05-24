@@ -1,19 +1,13 @@
-﻿using Rema1000LagerStyringsSystem.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rema1000LagerStyringsSystem.Services;
+﻿using System.Collections.Generic;
 using Rema1000LagerStyringsSystem.Interface;
 
 
-namespace Rema1000LagerStyringsSystem.Services
+namespace Rema1000LagerStyringsSystem
 {
     public class StatisticService : IStatistic
     {
         ItemService ItemService = new ItemService();
-        StorageTypeService StorageType = new StorageTypeService();
+        //StorageTypeService StorageType = new StorageTypeService();
 
         private List<Customer> customers;
 
@@ -32,17 +26,17 @@ namespace Rema1000LagerStyringsSystem.Services
             }
             return null;
         }
-        public StorageType StorageTypeSearch(string storageTypeName)
-        {
-            foreach (StorageType storageType in storageTypes)
-            {
-                if (storageType != null)
-                {
-                    if (string.Equals(storageType.Name, storageTypeName)) return storageType;
-                }
-            }
-            return null;
-        }
+        //public StorageType StorageTypeSearch(string storageTypeName)
+        //{
+        //    foreach (StorageType storageType in storageTypes)
+        //    {
+        //        if (storageType != null)
+        //        {
+        //            if (string.Equals(storageType.Name, storageTypeName)) return storageType;
+        //        }
+        //    }
+        //    return null;
+        //}
 
 
     }

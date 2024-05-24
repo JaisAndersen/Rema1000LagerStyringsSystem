@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
-
+using static Rema1000LagerStyringsSystem.Item;
 
 namespace Rema1000LagerStyringsSystem
 {
-    public class ItemPrintModel : PageModel
+    public class StorageTypeReadModel : PageModel
     {
         private IItem repo;
-        public ItemPrintModel(IItem repository)
+        public StorageTypeReadModel(IItem repository)
         {
             repo = repository;
         }
@@ -16,7 +16,7 @@ namespace Rema1000LagerStyringsSystem
 
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
-        
+
         public IActionResult OnGet()
         {
             itemList = repo.GetAllItems();

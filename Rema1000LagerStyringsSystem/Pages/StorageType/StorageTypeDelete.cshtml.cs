@@ -3,26 +3,25 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Rema1000LagerStyringsSystem
 {
-    public class ItemDeleteModel : PageModel
+    public class StorageTypeDeleteModel : PageModel
     {
-        private IItem repo;
         [BindProperty]
-        public Item item { get; set; }
-        public ItemDeleteModel(IItem repository)
+        public StorageType storageType { get; set; }
+        public IStorageType repo;
+        public StorageTypeDeleteModel(IStorageType repository) 
         {
             repo = repository;
         }
         public IActionResult OnGet(int Id)
         {
-            item = repo.GetItem(Id);
+            storageType = repo.GetStorageType(Id);
             return Page();
         }
 
         public IActionResult OnPost(int id)
         {
-            repo.RemoveItem(id);
-            return RedirectToPage("ItemPrint");
+            repo.RemoveStorageType(id);
+            return RedirectToPage("StorageTypeRead");
         }
     }
 }
-

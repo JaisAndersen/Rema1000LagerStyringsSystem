@@ -1,0 +1,54 @@
+﻿@page
+@model Rema1000LagerStyringsSystem.StorageTypeReadModel
+@using Rema1000LagerStyringsSystem.Interface
+@inject IItem repository
+@{
+    ViewData["Title"] = "StorageTypeReadModel";
+}
+<h1>Alle kategorier</h1>
+
+@* <p>
+    <a asp-page="StorageTypeCreate">Opret ny kategori</a>
+</p> *@
+
+<form>
+    <p>
+        Search: <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Navn
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.itemList)
+        {
+            <tr>
+                <td>
+                    @item.StorageType
+                </td>
+                @* <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    <p>
+                        <a asp-page="StorageTypeUpdate" asp-route-id="@item.Id">Redigere</a> 
+                        <p></p>
+                        <a asp-page="StorageTypeDelete" asp-route-id="@item.Id">Slet</a>
+                    </p>
+                </td> *@
+            </tr>
+        }
+
+    </tbody>
+
+</table>

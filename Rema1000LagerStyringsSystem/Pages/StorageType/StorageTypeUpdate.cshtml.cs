@@ -3,19 +3,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Rema1000LagerStyringsSystem
 {
-    public class ItemUpdateModel : PageModel
+    public class StorageTypeUpdateModel : PageModel
     {
         [BindProperty]
-        public Item item { get; set; }
-        private IItem repo;
+        public StorageType storageType { get; set; }
+        private IStorageType repo;
 
-        public ItemUpdateModel(IItem repository)
+        public StorageTypeUpdateModel(IStorageType repository)
         {
             repo = repository;
         }
         public IActionResult OnGet(int Id)
         {
-            item = repo.GetItem(Id);
+            storageType = repo.GetStorageType(Id);
             return Page();
         }
 
@@ -25,8 +25,8 @@ namespace Rema1000LagerStyringsSystem
             {
                 return Page();
             }
-            repo.UpdateItem(item);
-            return RedirectToPage("ItemPrint");
+            repo.UpdateStorageType(storageType);
+            return RedirectToPage("StorageTypeRead");
         }
     }
 }
