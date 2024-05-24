@@ -9,9 +9,6 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
     public class ItemUpdateModel : PageModel
     {
-
-        
-        
         [BindProperty]
         public Item Item { get; set; }
         private ItemService itemService;

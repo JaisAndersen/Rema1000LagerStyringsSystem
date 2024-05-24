@@ -14,9 +14,9 @@ using System.Threading.Tasks;
         private Item Item;
         List<Item> itemList;
 
-        public ItemService(string fileName)
+        public ItemService()
         {
-            this.fileName = fileName;
+
         }
 
         public List<Item> ItemList
@@ -76,6 +76,7 @@ using System.Threading.Tasks;
         {
             return itemList[id-1];
         }
+        public Item item { get { return item; } }
     }
 }
  

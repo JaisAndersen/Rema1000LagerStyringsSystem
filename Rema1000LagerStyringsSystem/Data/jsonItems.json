@@ -1,3 +1,14 @@
 [
-
+  {
+    "Id": 1,
+    "Name": "Arla mælk",
+    "Price": 17.0,
+    "Mærke": null
+  },
+  {
+    "Id": 2,
+    "Name": "arla ost",
+    "Price": 56.0,
+    "Mærke": null
+  }
 ]
