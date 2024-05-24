@@ -5,7 +5,7 @@
 @{
     ViewData["Title"] = "ItemPrintModel";
 }
-<h1>Print all items</h1>
+<h1>Alle varer</h1>
 
 <p>
     <a asp-page="ItemCreate">Create New Item</a>
@@ -25,10 +25,16 @@
                 Id
             </th>
             <th>
-                Name
+                Varekategori
             </th>
             <th>
-                Price
+                Navn
+            </th>
+            <th>
+                Pris
+            </th>
+            <th>
+                Mærke
             </th>
         </tr>
     </thead>
@@ -40,7 +46,13 @@
                     @item.Id
                 </td>
                 <td>
+                    @item.StorageType
+                </td>
+                <td>
                     @item.Name
+                </td>
+                <td>
+                    @item.Brand
                 </td>
                 <td>
                     @item.Price

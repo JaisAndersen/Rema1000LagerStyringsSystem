@@ -9,11 +9,10 @@ namespace Rema1000LagerStyringsSystem.Models
 {
     public class StorageType
     {
-        private int _id = 1;
+        private int _id;
         private string _name;
-        private static int _storageTypeCounter;
         
-        public StorageType(string name)
+        public StorageType()
         {
             _id = Id;
             _name = Name;
@@ -32,6 +31,9 @@ namespace Rema1000LagerStyringsSystem.Models
             get { return _name; }
             set { _name = value; }
         }   
-
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }

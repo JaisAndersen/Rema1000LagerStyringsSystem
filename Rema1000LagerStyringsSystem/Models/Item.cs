@@ -9,15 +9,17 @@ namespace Rema1000LagerStyringsSystem.Models
     {
         private int _id;
         private string _name;
-        private string _mærke;
+        private string _brand;
         private double _price;
+        private StorageType _storageType;
 
         public Item() 
         {
             _name = Name;
             _id = Id;
             _price = Price;
-            _mærke = Mærke;
+            _brand = Brand;
+            _storageType = StorageType;
         }
 
         public int Id
@@ -38,11 +40,12 @@ namespace Rema1000LagerStyringsSystem.Models
             get { return _price; }
             set { _price = value; }
         }
-        public string Mærke 
+        public string Brand 
         {
-            get { return _mærke; }
-            set { _mærke = value; }
+            get { return _brand; }
+            set { _brand = value; }
         }
+        public StorageType StorageType { get { return _storageType; } set { _storageType = value; } }
     }
 
 }

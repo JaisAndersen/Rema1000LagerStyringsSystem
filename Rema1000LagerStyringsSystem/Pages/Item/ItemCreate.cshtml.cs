@@ -12,7 +12,6 @@ namespace Rema1000LagerStyringsSystem.Pages.Itemcrud
 {
     public class ItemCreateModel : PageModel
     {
-        public SelectList StorageTypeList { get; set; }
         [BindProperty]
         public Item item { get; set; }
         private IItem repo;

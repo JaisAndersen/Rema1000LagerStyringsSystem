@@ -10,14 +10,15 @@ namespace Rema1000LagerStyringsSystem.Services
 {
     public class StorageTypeService : IStorageType
     {
-        private StorageType StorageType = new StorageType("name");
+        private StorageType StorageType = new StorageType();
         private List<Item> items;
         private string fileName = "";
         private List<StorageType> storageTypeList;
 
         public StorageTypeService() 
         { 
-            
+            storageTypeList = new List<StorageType>();
+            storageTypeList.Add(new StorageType() { Id = 1, Name="Majeri"});
         }
       
         public List<StorageType> StorageTypeList

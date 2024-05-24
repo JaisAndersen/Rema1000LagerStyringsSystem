@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "Id": 1,
+    "Name": "ost",
+    "Price": 75.0,
+    "Brand": "Arla",
+    "StorageType": null
+  },
+  {
+    "Id": 2,
+    "Name": "Mælk",
+    "Price": 654.0,
+    "Brand": "Arla",
+    "StorageType": {
+      "Id": 1,
+      "Name": "Majeri"
+    }
+  }
+]
