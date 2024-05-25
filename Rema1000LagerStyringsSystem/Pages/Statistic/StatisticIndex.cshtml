@@ -13,26 +13,21 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
     <div class="container">
         <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
             <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-page="Item/ItemPrint">Varer</a>
-                </li>
-                @* <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="StorageType/StorageTypeRead">Varekategori</a>
-                </li> *@
-                </li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="Statistic/StatisticIndex">Statistik</a>
-                </li>
+            <li class="nav-item">
+            <div>
+                Varer
+            </div>
+                    <li>
+                        Der er i alt @repository.GetAllItems().Count varer 
+                        <p>
+                        Der er i alt @Enum.GetNames(typeof(StorageType)).Length varekategorier
+                        </p>
+            </li>
+                Se varerne her: <a class="nav-link text-dark" asp-area="" asp-page="/Item/ItemPrint">Varer</a>
+            </li>
             </ul>
         </div>
     </div>
-</nav>
