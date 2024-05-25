@@ -41,7 +41,7 @@ namespace Rema1000LagerStyringsSystem
             return new Item();
         }
 
-        public Item RemoveItem(int id)
+        public void RemoveItem(int id)
         {
             List<Item> Items = GetAllItems();
             foreach (Item item in Items.ToList())
@@ -50,8 +50,6 @@ namespace Rema1000LagerStyringsSystem
                     Items.Remove(item);
                 jsonFileWriterItem.WriteToJson(Items, fileName);
             }
-            return new Item();
-
         }
 
         public void UpdateItem(Item item)

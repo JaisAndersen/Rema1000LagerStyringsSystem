@@ -6,7 +6,7 @@ namespace Rema1000LagerStyringsSystem
     {
         Item GetItem(int id);
         void AddItem(Item item);
-        Item RemoveItem(int id);
+        void RemoveItem(int id);
         void UpdateItem(Item item);
         List<Item> FilterItems(string filter);
         List<Item> GetAllItems();

@@ -24,14 +24,13 @@ namespace Rema1000LagerStyringsSystem
                 itemList.Add(item);
         }
 
-        public Item RemoveItem(int id)
+        public void RemoveItem(int id)
         {
             foreach (Item item in itemList.ToList())
             {
                 if(item.Id == id)
                     itemList.Remove(item);
             }
-            return new Item();
         }
 
         public void UpdateItem(Item item)

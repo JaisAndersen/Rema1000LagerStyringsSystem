@@ -1,12 +1,5 @@
 [
   {
-    "Id": 2,
-    "Name": "Hakketoksekød",
-    "Price": 45.0,
-    "Brand": "Danbo",
-    "StorageType": 0
-  },
-  {
     "Id": 3,
     "Name": "Kødfilet",
     "Price": 75.0,
