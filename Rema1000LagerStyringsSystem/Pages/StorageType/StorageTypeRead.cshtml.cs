@@ -8,6 +8,7 @@ namespace Rema1000LagerStyringsSystem
     public class StorageTypeReadModel : PageModel
     {
         private IItem repo;
+        private StorageType storageType;
         public StorageTypeReadModel(IItem repository)
         {
             repo = repository;
