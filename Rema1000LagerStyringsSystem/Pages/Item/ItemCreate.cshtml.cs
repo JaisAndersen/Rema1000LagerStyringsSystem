@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Linq;
 
 
@@ -22,7 +23,14 @@ namespace Rema1000LagerStyringsSystem
             {
                 return Page();
             }
-            repo.AddItem(item);
+            if (repo.GetItem(item.Id).Id == item.Id)
+            {
+                return Page();
+            }
+            else
+            {
+                repo.AddItem(item);
+            }
             return RedirectToPage("ItemPrint");
         }
         public IActionResult OnGet()

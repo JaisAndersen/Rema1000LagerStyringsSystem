@@ -8,9 +8,9 @@ namespace Rema1000LagerStyringsSystem
 {
     public class ItemPrintModel : PageModel
     {
-        private IItem repo;
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
+        private IItem repo;
         public ItemPrintModel(IItem repository)
         {
             repo = repository;
@@ -20,6 +20,7 @@ namespace Rema1000LagerStyringsSystem
         public IActionResult OnGet()
         {
             itemList = repo.GetAllItems();
+            itemList = itemList.OrderBy(x => x.Id).ToList();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
                 itemList = repo.FilterItems(FilterCriteria);

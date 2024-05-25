@@ -13,56 +13,26 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Varekategori
-            </th>
-            <th>
-                Mærke
-            </th>
-            <th>
-                Navn
-            </th>
-            <th>
-                Pris
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.itemList)
-        {
-            <tr>
-                <td>
-                    @item.Id
-                </td>
-                <td>
-                    @item.StorageType
-                </td>
-                <td>
-                    @item.Brand
-                </td>
-                <td>
-                    @item.Name
-                </td>
-                <td>
-                    @item.Price
-                </td>
-                <td>
-                    <p>
-                        <a asp-page="ItemUpdate" asp-route-id="@item.Id">Redigere</a>
-                    <p></p>
-                    <a asp-page="ItemDelete" asp-route-id="@item.Id">Slet</a>
-                    </p>
-                </td>
-            </tr>
-        }
-
-    </tbody>
-
-</table>
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="Item/ItemPrint">Varer</a>
+                </li>
+                @* <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-page="StorageType/StorageTypeRead">Varekategori</a>
+                </li> *@
+                </li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-page="Statistic/StatisticIndex">Statistik</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

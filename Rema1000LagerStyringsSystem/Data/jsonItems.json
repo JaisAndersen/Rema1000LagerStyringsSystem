@@ -47,5 +47,12 @@
     "Price": 55.0,
     "Brand": "Danbo",
     "StorageType": 1
+  },
+  {
+    "Id": 2,
+    "Name": "Jordbær",
+    "Price": 25.0,
+    "Brand": "Rema1000",
+    "StorageType": 2
   }
 ]
