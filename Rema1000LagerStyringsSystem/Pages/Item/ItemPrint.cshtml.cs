@@ -20,12 +20,16 @@ namespace Rema1000LagerStyringsSystem
         public IActionResult OnGet()
         {
             itemList = repo.GetAllItems();
-            itemList = itemList.OrderBy(x => x.Id).ToList();
+            itemList = itemList.OrderBy(item => item.Id).ToList();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
                 itemList = repo.FilterItems(FilterCriteria);
             }
             return Page();
+        }
+        public IActionResult OnPost() 
+        {
+            return Page(); 
         }
     }
 }

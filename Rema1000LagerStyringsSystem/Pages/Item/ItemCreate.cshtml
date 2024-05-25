@@ -3,7 +3,7 @@
 @using Rema1000LagerStyringsSystem
 @inject IItem repository
 @{
-    ViewData["Title"] = "ItemCreate";
+    ViewData["Title"] = "OpretNyVare";
 }
 <h1>Opret ny vare</h1>
 
@@ -39,8 +39,8 @@
     <p></p>
     <div class="form-group">
         <input type="submit" value="Opret" class="btn btn-primary" />
+        <input type="reset" value="Nulstil" class="btn brn-primary" />
     </div>
-    <div>
         <a asp-page="ItemPrint">Tilbage til alle varer</a>
     </div>
 </form>
