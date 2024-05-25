@@ -7,27 +7,27 @@
 }
 <h1>Statistik</h1>
 
-<form>
+@* <form>
     <p>
         Search: <input type="text" asp-for="FilterCriteria" />
         <input type="submit" value="Filter" />
     </p>
-</form>
-    <div class="container">
-        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-            <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-            <div>
-                Varer
-            </div>
-                    <li>
-                        Der er i alt @repository.GetAllItems().Count varer 
-                        <p>
-                        Der er i alt @Enum.GetNames(typeof(StorageType)).Length varekategorier
-                        </p>
-            </li>
-                Se varerne her: <a class="nav-link text-dark" asp-area="" asp-page="/Item/ItemPrint">Varer</a>
-            </li>
-            </ul>
-        </div>
+</form> *@
+<body>
+    <div>
+        <h5>
+            Varer
+        </h5>
+        Der er i alt @repository.GetAllItems().Count varer <p></p>
+        Se varerne her:
+        <a class="nav-link text-dark" asp-area="" asp-page="/Item/ItemPrint">Varer</a>
     </div>
+    <div>
+        <h5>
+            Varekategori
+        </h5>
+        Der er i alt @Enum.GetNames(typeof(StorageType)).Length varekategorier <p></p>
+        Se kategorierne her:
+        <a class="nav-link text-dark" asp-area="" asp-page="/StorageType/StorageTypeRead">Varekategori</a>
+    </div>
+</body>

@@ -2,7 +2,7 @@
   {
     "Id": 3,
     "Name": "Kødfilet",
-    "Price": 75.0,
+    "Price": 65.0,
     "Brand": "Danbo",
     "StorageType": 1
   },
@@ -37,7 +37,7 @@
   {
     "Id": 1,
     "Name": "Yogurt",
-    "Price": 35.0,
+    "Price": 25.0,
     "Brand": "Danino",
     "StorageType": 0
   },

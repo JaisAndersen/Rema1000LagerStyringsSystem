@@ -11,13 +11,13 @@
     <a asp-page="StorageTypeCreate">Opret ny kategori</a>
 </p> *@
 
-<form>
+@* <form>
     <p>
         Search: <input type="text" asp-for="FilterCriteria" />
         <input type="submit" value="Filter" />
     </p>
 </form>
-
+ *@
 <table class="table">
     <thead>
         <tr>
@@ -27,11 +27,11 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.itemList)
+        @foreach (var item in Enum.GetNames(typeof(StorageType)))
         {
             <tr>
                 <td>
-                    
+                    @item
                 </td>
                 @* <td>
                     @item.Id
