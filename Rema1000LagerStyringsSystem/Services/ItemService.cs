@@ -44,6 +44,7 @@ namespace Rema1000LagerStyringsSystem
                     Item.Brand = item.Brand;
                     Item.Name = item.Name;
                     Item.Price = item.Price;
+                    item.Quantity = item.Quantity;
                 }
             }
         }

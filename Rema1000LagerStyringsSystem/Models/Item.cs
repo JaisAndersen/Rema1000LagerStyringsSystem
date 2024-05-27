@@ -9,6 +9,7 @@ namespace Rema1000LagerStyringsSystem
         private string _name;
         private string _brand;
         private double _price;
+        private int _quantity;
         private StorageType _storageType;
 
         public Item() 
@@ -18,6 +19,7 @@ namespace Rema1000LagerStyringsSystem
             _price = Price;
             _brand = Brand;
             _storageType = StorageType;
+            _quantity = Quantity;
         }
 
         [BindProperty]
@@ -52,7 +54,15 @@ namespace Rema1000LagerStyringsSystem
             set { _brand = value; }
         }
         [BindProperty]
-        [Display(Name ="Varekategori")]
+        [Display(Name = "Antal varer")]
+        [Required]
+        public int Quantity
+        {
+            get { return _quantity; }
+            set { _quantity = value; }
+        }
+        [BindProperty]
+        [Display(Name = "Varekategori")]
         [EnumDataType(typeof(StorageType))]
         [Required]
         public StorageType StorageType { get { return _storageType; } set { _storageType = value; } }
