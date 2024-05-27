@@ -57,5 +57,4 @@ namespace Rema1000LagerStyringsSystem
         [Required]
         public StorageType StorageType { get { return _storageType; } set { _storageType = value; } }
     }
-
 }

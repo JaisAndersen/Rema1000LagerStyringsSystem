@@ -6,8 +6,8 @@ namespace Rema1000LagerStyringsSystem
 {
     public enum StorageType
     {
-        [Display(Name = "Majeri")]
-        Majeri = 0,
+        [Display(Name = "Mejeri")]
+        Mejeri = 0,
         [Display(Name = "Kød")]
         Kød = 1,
         [Display(Name = "Frost")]
