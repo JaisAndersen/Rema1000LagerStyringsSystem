@@ -5,7 +5,7 @@ namespace Rema1000LagerStyringsSystem
 {
     public class ItemJson : IItem
     {
-        string fileName = @"C:\Users\mstac\source\repos\Rema1000LagerStyringsSystem\Rema1000LagerStyringsSystem\Rema1000LagerStyringsSystem\Data\jsonItems.json";
+        string fileName = @"C:\Users\Mus\source\repos\Rema1000LagerStyringsSystem\Rema1000LagerStyringsSystem\Rema1000LagerStyringsSystem\Data\jsonItems.json";
 
         public void AddItem(Item item)
         {
