@@ -9,6 +9,7 @@ namespace Rema1000LagerStyringsSystem
 {
     public class ItemCreateModel : PageModel
     {
+        public string errorMessage = "";
         [BindProperty]
         public Item item { get; set; }
         public SelectList selectListStorageType { get; set; }
@@ -25,6 +26,7 @@ namespace Rema1000LagerStyringsSystem
             }
             if (repo.GetItem(item.Id).Id == item.Id)
             {
+                errorMessage = "ID findes allerede";
                 return Page();
             }
             else

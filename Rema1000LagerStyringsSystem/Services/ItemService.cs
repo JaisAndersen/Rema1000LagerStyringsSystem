@@ -11,9 +11,9 @@ namespace Rema1000LagerStyringsSystem
         }
         public Item GetItem(int id)
         {
-            foreach (Item item in itemList) 
+            foreach (Item item in itemList)
             {
-                if(item.Id == id)
+                if (item.Id == id)
                     return item;
             }
             return new Item();
@@ -28,7 +28,7 @@ namespace Rema1000LagerStyringsSystem
         {
             foreach (Item item in itemList.ToList())
             {
-                if(item.Id == id)
+                if (item.Id == id)
                     itemList.Remove(item);
             }
         }
@@ -67,4 +67,3 @@ namespace Rema1000LagerStyringsSystem
 
     }
 }
- 
