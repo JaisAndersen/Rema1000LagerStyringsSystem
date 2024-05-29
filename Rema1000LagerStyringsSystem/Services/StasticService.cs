@@ -6,7 +6,7 @@ namespace Rema1000LagerStyringsSystem
 {
     public class StatisticService : IStatistic
     {
-        ItemService ItemService = new ItemService();
+        //ItemService ItemService = new ItemService();
         //StorageTypeService StorageType = new StorageTypeService();
 
         private List<Customer> customers;

@@ -7,24 +7,24 @@ namespace Rema1000LagerStyringsSystem
 {
     public class StorageTypeReadModel : PageModel
     {
-        private IItem repo;
-        private StorageType storageType;
-        public StorageTypeReadModel(IItem repository)
+        //private IItem repo;
+        //private StorageType storageType;
+        public StorageTypeReadModel(/*IItem repository*/)
         {
-            repo = repository;
+            //repo = repository;
         }
-        public List<Item> itemList { get; set; }
+        //public List<Item> itemList { get; set; }
 
-        [BindProperty(SupportsGet = true)]
-        public string FilterCriteria { get; set; }
+        //[BindProperty(SupportsGet = true)]
+        //public string FilterCriteria { get; set; }
 
         public IActionResult OnGet()
         {
-            itemList = repo.GetAllItems();
-            if (!string.IsNullOrEmpty(FilterCriteria))
-            {
-                itemList = repo.FilterItems(FilterCriteria);
-            }
+            //itemList = repo.GetAllItems();
+            //if (!string.IsNullOrEmpty(FilterCriteria))
+            //{
+            //    itemList = repo.FilterItems(FilterCriteria);
+            //}
             return Page();
         }
     }

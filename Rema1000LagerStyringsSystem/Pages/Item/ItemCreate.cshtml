@@ -8,9 +8,17 @@
 <h1>Opret ny vare</h1>
 
 <form method="post">
+    @if (Model.errorMessage.Length > 0)
+    {
+        <div>
+            <label "errorMessage" class="text-danger">Fejl</label>
+            <label asp-for="@Model.errorMessage" class="text-danger"></label>
+        </div>
+    }
+
     <div class="form-group">
-        <label asp-for="item.Id" class="control-label">ID</label>
-        <input asp-for="item.Id" class="form-control" /> 
+        <label asp-for="@Model.item.Id" class="control-label">ID</label>
+        <input asp-for="@Model.item.Id" class="form-control" /> 
         <span asp-validation-for="@Model.item.Id" class="text-danger"></span>
     </div>
     <p></p>
@@ -23,27 +31,25 @@
     </div>
     <p></p>
     <div>
-        <label asp-for="item.Brand" class="control-label">Mærke</label>
-        <input asp-for="item.Brand" class="form-control" />
-        <span asp-validation-for="item.Brand" class="text-danger"></span>
+        <label asp-for="@Model.item.Brand" class="control-label">Mærke</label>
+        <input asp-for="@Model.item.Brand" class="form-control" />
+        <span asp-validation-for="@Model.item.Brand" class="text-danger"></span>
     </div>
     <p></p>
     <div class="form-group">
-        <label asp-for="item.Name" class="control-label">Navn</label>
-        <input asp-for="item.Name" class="form-control" />
-        <span asp-validation-for="item.Name" class="text-danger"></span>
+        <label asp-for="@Model.item.Name" class="control-label">Navn</label>
+        <input asp-for="@Model.item.Name" class="form-control" />
+        <span asp-validation-for="@Model.item.Name" class="text-danger"></span>
     </div>
     <p></p>
     <div>
-        <label asp-for="item.Price" class="control-label">Pris</label>
-        <input asp-for="item.Price" class="form-control" />
-        <span asp-validation-for="item.Price" class="text-danger"></span>
-    </div>
-    <p></p>
+        <label asp-for="@Model.item.Price" class="control-label">Pris</label>
+        <input asp-for="@Model.item.Price" class="form-control" />
+        <span asp-validation-for="@Model.item.Price" class="text-danger"></span>
     <div>
-        <label asp-for="item.Quantity" class="control-label">Antal på lageret</label>
-        <input asp-for="item.Quantity" class="form-control" />
-        <span asp-validation-for="item.Quantity" class="text-danger"></span>
+        <label asp-for="@Model.item.Quantity" class="control-label">Antal på lageret</label>
+        <input asp-for="@Model.item.Quantity" class="form-control" />
+        <span asp-validation-for="@Model.item.Quantity" class="text-danger"></span>
     </div>
     <p></p>
     <p></p>
